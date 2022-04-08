@@ -10,7 +10,7 @@ defmodule CommunityWeb.Schema do
   end
 
   query do
-    @desc "Get all links"
+    @desc "Get all stored links"
     field :all_links, non_null(list_of(non_null(:link))) do
       resolve(&NewsResolver.all_links/3)
     end
